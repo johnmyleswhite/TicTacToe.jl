@@ -6,7 +6,9 @@ function play(experience::String, beta::Float64)
     p2 = Player(2)
 
     # Load cached values
-    pathname = joinpath("cache", string("p1values_", experience, ".csv"))
+    pathname = joinpath(Pkg.dir("TicTacToe"),
+                        "cache",
+                        string("p1values_", experience, ".csv"))
     p1.values = squeeze(readcsv(pathname))
     p2.values = 1.0 - p1.values
 
