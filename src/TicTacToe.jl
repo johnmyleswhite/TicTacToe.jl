@@ -7,6 +7,6 @@ module TicTacToe
 
     include("board.jl")
     include("player.jl")
-    include("train.jl")
+    include("training.jl")
     include("ui.jl")
 end
