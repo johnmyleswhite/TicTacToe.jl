@@ -79,7 +79,13 @@ function play(experience::String, beta::Float64)
     show(STDIN, b)
     @printf "\n"
 
-    @printf "Game over!\n"
+    if iswin(p1, b)
+        @printf "Player 1 wins!\n"
+    elseif iswin(p2, b)
+        @printf "Player 2 wins!\n"
+    else
+        @printf "A draw!\n"
+    end
 end
 
 # Reasonable defaults
